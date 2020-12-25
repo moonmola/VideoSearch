@@ -51,6 +51,7 @@ trackers라는 container에 담긴 정보가 하나도 없을 경우 'datFrameDa
 <br><br>
 ## 3. 기능 및 UI
 - Qt Designer로 레이아웃을 편집하였으며 PyQt라이브러리로 구현하였습니다.
+UserInterface.py파일을 실행하면 아래 화면을 볼 수 있습니다.
 
 ### 1) 메인화면
 <img src=https://user-images.githubusercontent.com/55346446/102999159-e0302180-456b-11eb-8a6f-6b37cb925dd0.png width="600">

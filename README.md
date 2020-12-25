@@ -41,17 +41,17 @@ Tracking은 주변 환경에서 일어나는 이미지의 움직임, 경로(Path
 trackers라는 container에 담긴 정보가 하나도 없을 경우 'datFrameData.box'라는 곳의 박스 정보를 넣게 된다. 칼만필터를 작동 시켜야 하는데 칼만 필터는 이전 데이터를 가지고 predict(예측) 과정 연산을 하게 되는데 아무것도 없을 경우 그냥 현재 Detection된 Box의 정 보로 초기화를 해야하기 때문이다.<br>
 2) Prediction : 칼만필터에서 Predict 하는 과정이다. 결과 값으로는 Xp(예측값), Pp(예측 오차공 분산)이 나온다.
 3) IoU : 이전 Box 정보가 현 frame에서 같은 ID라고 매칭 시키는 방법이다. Prediction값(이전 데이터를 통해 예측된 값)과 방금 들어온 Detection Box들이 'GetIOU'라는 함수로 들어가서 iouMatrix에 저장이 된다. IoU란 Intersection over Union의 약자로 '교집합(두개의 박스가 겹 치는 부분의 면적) / 합집합(두개의 박스의 모든 면적)'의 결과물이 비율로 나오게 되어 이 점 수가 크면 확률상 같은 ID라고 판단 할 수 있다. score가 클수록 더 사각형이 일치한다.<br>
-4) Hungarian : 비용(연산량)을 최소화 시키는 할당 시키는 최적 matching 알고리즘이다. 매칭이 이루어 진 정보는 'assignment'에 담긴다.
+4) Hungarian : 비용(연산량)을 최소화 시키는 할당 시키는 최적 matching 알고리즘이다. 매칭이 이루어 진 정보는 'assignment'에 담긴다.<br>
 
 최종 결과는 다음 표와 같다. 사용한 데이터셋은 Mot15이고 MOT challenge benchmark
-사이트에서 제공하는 다중 객체 추적 성능 평가 tool 을 사용하여 추적 정확도 성능을 평가하였다.
+사이트에서 제공하는 다중 객체 추적 성능 평가 tool 을 사용하여 추적 정확도 성능을 평가하였다.<br>
 <img src=https://user-images.githubusercontent.com/55346446/103093322-52bd0200-463d-11eb-988e-1a3e68297931.png width="600">
 
 
 <br><br>
 ## 3. 기능 및 UI
 - Qt Designer로 레이아웃을 편집하였으며 PyQt라이브러리로 구현하였습니다.
-UserInterface.py파일을 실행하면 아래 화면을 볼 수 있습니다.
+<br>UserInterface.py파일을 실행하면 아래 화면을 볼 수 있습니다.
 
 ### 1) 메인화면
 <img src=https://user-images.githubusercontent.com/55346446/102999159-e0302180-456b-11eb-8a6f-6b37cb925dd0.png width="600">
